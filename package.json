@@ -1,0 +1,18 @@
+{
+  "name": "tomato-clock",
+  "version": "1.0.0",
+  "description": "A Pomodoro timer with bird animation",
+  "scripts": {
+    "dev": "cargo tauri dev",
+    "build": "cargo tauri build",
+    "tauri": "cargo tauri"
+  },
+  "dependencies": {
+    "@tauri-apps/api": "^2"
+  },
+  "devDependencies": {
+    "@tauri-apps/cli": "^2"
+  },
+  "author": "ILTomatoes",
+  "license": "MIT"
+}

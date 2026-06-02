@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tomato Clock</title>
+  <link rel="stylesheet" href="styles/main.css" />
+</head>
+<body>
+  <div class="app">
+    <div class="phase-label" id="phase-label">空闲</div>
+    <div class="timer-ring">
+      <svg viewBox="0 0 200 200">
+        <circle class="ring-bg" cx="100" cy="100" r="90" />
+        <circle class="ring-progress" id="ring-progress" cx="100" cy="100" r="90" />
+      </svg>
+      <div class="timer-display" id="timer-display">25:00</div>
+    </div>
+    <div class="cycle-info" id="cycle-info"></div>
+    <div class="controls">
+      <button class="btn btn-primary" id="btn-start">开始</button>
+      <button class="btn btn-secondary" id="btn-pause" disabled>暂停</button>
+      <button class="btn btn-danger" id="btn-stop" disabled>停止</button>
+    </div>
+    <div class="footer">
+      <button class="btn-icon" id="btn-settings" title="设置">⚙</button>
+    </div>
+  </div>
+  <script src="scripts/main.js"></script>
+</body>
+</html>

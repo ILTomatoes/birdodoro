@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>设置</title>
+  <link rel="stylesheet" href="styles/settings.css" />
+</head>
+<body>
+  <div class="settings">
+    <h2>设置</h2>
+    <form id="settings-form">
+      <div class="field">
+        <label for="work-duration">工作时长 (分钟)</label>
+        <input type="number" id="work-duration" min="1" max="120" value="25" />
+      </div>
+      <div class="field">
+        <label for="short-break">短休息时长 (分钟)</label>
+        <input type="number" id="short-break" min="1" max="30" value="5" />
+      </div>
+      <div class="field">
+        <label for="long-break">长休息时长 (分钟)</label>
+        <input type="number" id="long-break" min="1" max="60" value="15" />
+      </div>
+      <div class="field">
+        <label for="pomodoros-cycle">每组番茄数</label>
+        <input type="number" id="pomodoros-cycle" min="1" max="10" value="4" />
+      </div>
+      <div class="field checkbox">
+        <label>
+          <input type="checkbox" id="animation-enabled" checked />
+          启用小鸟动效
+        </label>
+      </div>
+      <div class="actions">
+        <button type="submit" class="btn btn-primary">保存</button>
+        <button type="button" class="btn btn-secondary" id="btn-cancel">取消</button>
+      </div>
+    </form>
+  </div>
+  <script src="scripts/settings.js"></script>
+</body>
+</html>

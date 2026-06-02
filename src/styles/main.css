@@ -1,0 +1,133 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+  background: #1a1a2e;
+  color: #eee;
+  user-select: none;
+  overflow: hidden;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  padding: 20px;
+}
+
+.phase-label {
+  font-size: 18px;
+  color: #aaa;
+  margin-bottom: 16px;
+  letter-spacing: 2px;
+}
+
+.phase-label.work { color: #ff6b6b; }
+.phase-label.short-break { color: #4ecdc4; }
+.phase-label.long-break { color: #45b7d1; }
+
+.timer-ring {
+  position: relative;
+  width: 240px;
+  height: 240px;
+}
+
+.timer-ring svg {
+  width: 100%;
+  height: 100%;
+  transform: rotate(-90deg);
+}
+
+.ring-bg {
+  fill: none;
+  stroke: #2d2d44;
+  stroke-width: 8;
+}
+
+.ring-progress {
+  fill: none;
+  stroke: #ff6b6b;
+  stroke-width: 8;
+  stroke-linecap: round;
+  stroke-dasharray: 565.48;
+  stroke-dashoffset: 0;
+  transition: stroke-dashoffset 1s linear, stroke 0.3s;
+}
+
+.ring-progress.short-break { stroke: #4ecdc4; }
+.ring-progress.long-break { stroke: #45b7d1; }
+
+.timer-display {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 48px;
+  font-weight: 300;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 2px;
+}
+
+.cycle-info {
+  margin-top: 12px;
+  font-size: 14px;
+  color: #888;
+  min-height: 20px;
+}
+
+.controls {
+  display: flex;
+  gap: 12px;
+  margin-top: 32px;
+}
+
+.btn {
+  padding: 10px 24px;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: opacity 0.2s, transform 0.1s;
+}
+
+.btn:active { transform: scale(0.96); }
+.btn:disabled { opacity: 0.4; cursor: default; }
+
+.btn-primary {
+  background: #ff6b6b;
+  color: #fff;
+}
+
+.btn-secondary {
+  background: #3d3d5c;
+  color: #eee;
+}
+
+.btn-danger {
+  background: #2d2d44;
+  color: #ff6b6b;
+  border: 1px solid #ff6b6b33;
+}
+
+.footer {
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
+}
+
+.btn-icon {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  opacity: 0.5;
+  transition: opacity 0.2s;
+}
+
+.btn-icon:hover { opacity: 1; }

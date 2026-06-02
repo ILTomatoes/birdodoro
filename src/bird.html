@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <title>Bird</title>
+  <link rel="stylesheet" href="styles/bird.css" />
+</head>
+<body>
+  <div class="bird" id="bird">
+    <svg viewBox="0 0 80 60" width="80" height="60">
+      <!-- Body -->
+      <ellipse cx="40" cy="35" rx="22" ry="14" fill="#ff9f43" />
+      <!-- Head -->
+      <circle cx="58" cy="25" r="10" fill="#ff9f43" />
+      <!-- Eye -->
+      <circle cx="62" cy="23" r="2.5" fill="#2d3436" />
+      <circle cx="63" cy="22" r="1" fill="#fff" />
+      <!-- Beak -->
+      <polygon points="68,25 76,27 68,29" fill="#ee5a24" />
+      <!-- Wing -->
+      <ellipse cx="35" cy="30" rx="14" ry="8" fill="#feca57" class="wing" />
+      <!-- Tail -->
+      <polygon points="16,30 6,22 8,36" fill="#ee5a24" />
+      <!-- Feet -->
+      <line x1="35" y1="48" x2="33" y2="56" stroke="#ee5a24" stroke-width="2" />
+      <line x1="45" y1="48" x2="47" y2="56" stroke="#ee5a24" stroke-width="2" />
+    </svg>
+  </div>
+  <script src="scripts/bird.js"></script>
+</body>
+</html>
